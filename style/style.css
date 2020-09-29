@@ -1,0 +1,36 @@
+.grid-stack {
+    /*background: #bbd0e6;*/
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.grid-stack>.grid-stack-item>.ui-resizable-se, .grid-stack>.grid-stack-item>.ui-resizable-sw {
+    background-size: contain;
+    background-image: url("resize4.png") !important;
+    transform: rotate(0deg);
+    width: 11px;
+    height: 13px;
+    bottom: 10px !important;
+}
+
+.grid-stack-item-content {
+    color: #2c3e50;
+    /* text-align: center; */
+    /*padding: 1rem;*/
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    horiz-align: right;
+}
+.grid-stack>.grid-stack-item>.grid-stack-item-content{
+    /*overflow-y: hidden !important;*/
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-stack>.grid-stack-item>.grid-stack-item-content::-webkit-scrollbar {
+    display: none;
+}

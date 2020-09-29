@@ -1,0 +1,30 @@
+<mvc:View
+        displayBlock="true"
+        controllerName="vistex.controller.Home.Home"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:f="sap.f"
+        xmlns:core="sap.ui.core"
+        xmlns:vd="vistex.control"
+>
+    <Page id="myPanel" title="VDashboard">
+      <!--  <core:HTML id="htmlGrid"/>-->
+        <!--<vd:VDashboardLayout>
+            <vd:IntegrationCard title="{data>/cards/custom2/title}"
+                                subTitle="{data>/cards/custom2/subTitle}"/>
+        </vd:VDashboardLayout>-->
+      <!--  <vd:VDashboardLayout>
+            <vd:cards>
+                <vd:IntegrationCard title="Hellow Item 1"
+                                    subTitle="ITem 1 subtitle" counter="1">
+                </vd:IntegrationCard>
+                <vd:IntegrationCard title="Hellow Item 1"
+                                    subTitle="ITem 1 subtitle"/>
+                <vd:IntegrationCard title="Hellow Item 1"
+                                    subTitle="ITem 1 subtitle"/>
+                <vd:IntegrationCard title="Hellow Item 1"
+                                    subTitle="ITem 1 subtitle"/>
+            </vd:cards>
+        </vd:VDashboardLayout>-->
+    </Page>
+</mvc:View>

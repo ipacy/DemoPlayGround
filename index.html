@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+    <title>Demo Playground</title>
+    <link rel="stylesheet" href="node_modules/gridstack/dist/gridstack.min.css" />
+    <script src="node_modules/gridstack/dist/gridstack.all.js"></script>
+    <!--    <script src="resources/sap-ui-core.js"-->
+    <script src="resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.m,sap.ui.layout"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-theme="sap_belize_plus"
+            data-sap-ui-preload="async"
+            data-sap-ui-resourceroots='{"vistex": ""}'>
+    </script>
+
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.require([
+                "sap/ui/core/ComponentContainer"
+            ], function (ComponentContainer) {
+                sap.ui.component({
+                    async: true,
+                    name: "vistex"
+                }).then(function (yourComponent) {
+                    new ComponentContainer({
+                        component: yourComponent,
+                    }).placeAt("content");
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="content" class="sapUiBody"></div>
+</body>
+</html>
