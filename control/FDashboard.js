@@ -3,7 +3,8 @@ sap.ui.define([
     "vistex/control/FDashboardRenderer",
     "sap/ui/thirdparty/jqueryui/jquery-ui-resizable",
     "sap/ui/core/ResizeHandler",
-], function (Control, FDashboardRenderer, resizable, ResizeHandler) {
+    "sap/ushell/ui/launchpad/GridContainer"
+], function (Control, FDashboardRenderer, resizable, ResizeHandler, LGridContainer) {
     "use strict";
     return Control.extend("vistex.control.FDashboard", {
         onAfterRendering: function () {

@@ -3,6 +3,7 @@
         xmlns="sap.m"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:f="sap.f"
+        xmlns:sh="sap.ushell.ui.launchpad"
         xmlns:control="vistex.control"
         displayBlock="true"
         height="100%">
@@ -11,15 +12,14 @@
     <ScrollContainer
             height="100%"
             width="100%"
-            vertical="true">
-        <Button
-                id="revealGrid"
+            vertical="true" id="scrCont">
+        <Button id="revealGrid"
                 text="To Custom Grid"
                 press="onNavTo"
                 class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiTinyMarginBottom"/>
-
         <control:FDashboard
                 id="grid1"
+                visible="true"
                 class="sapUiResponsiveContentPadding"
                 allowDenseFill="true"
                 snapToRow="true">
@@ -30,7 +30,7 @@
                 <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="1rem"/>
             </control:layoutS>
             <control:layoutXS>
-                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="1rem"/>
+                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="0.5rem"/>
             </control:layoutXS>
             <control:IntegrationCard title="card 1"
                                      subTitle="{data>/cards/custom2/subTitle}"
@@ -44,8 +44,6 @@
                       <f:GridContainerItemLayoutData minRows="2"  columns="4"/>
                   </control:layoutData>-->
             </control:IntegrationCard>
-
-
             <control:IntegrationCard title="card 2"
                                      subTitle="{data>/cards/custom2/subTitle}"
                                      counter="{data>/cards/custom2/counter}"
@@ -60,8 +58,6 @@
                       <f:GridContainerItemLayoutData minRows="2" columns="4"/>
                   </control:layoutData>-->
             </control:IntegrationCard>
-
-
             <control:IntegrationCard title="card 3"
                                      subTitle="{data>/cards/custom2/subTitle}"
                                      counter="{data>/cards/custom2/counter}"

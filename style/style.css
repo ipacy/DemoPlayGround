@@ -1,21 +1,18 @@
 .grid-stack {
     background: #bbd0e6;
-/*    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;*/
 }
 
 .grid-stack>.grid-stack-item>.ui-resizable-se, .grid-stack>.grid-stack-item>.ui-resizable-sw {
-    background-size: contain;
+    background-size: contain !important;
     background-image: url("resize4.png") !important;
-    transform: rotate(0deg);
-    width: 11px;
-    height: 13px;
+    transform: rotate(0deg) !important;
+    width: 11px !important;
+    height: 13px !important;
     bottom: 10px !important;
 }
 
 .grid-stack-item-content {
-    color: #2c3e50;
+    color: white;
     box-sizing: border-box;
     border-radius: 4px;
     box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);

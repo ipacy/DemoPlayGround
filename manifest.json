@@ -89,10 +89,10 @@
           "uri": "style/style.css"
         },
         {
-          "uri": "style/grid-stackextra.css"
+          "uri": "node_modules/gridstack/dist/gridstack.min.css"
         },
         {
-          "uri": "node_modules/gridstack/dist/gridstack.min.css"
+          "uri": "https://cdn.jsdelivr.net/npm/gridstack@2.0.0/dist/gridstack-extra.css"
         },
         {
           "uri": "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"

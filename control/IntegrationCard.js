@@ -6,8 +6,8 @@
 sap.ui.define([
     "sap/f/cards/BaseContent",
     "sap/ui/integration/widgets/Card",
-    'sap/f/CardRenderer',
-    // 'vistex/control/other/CardRenderer',
+    // 'sap/f/CardRenderer',
+    'vistex/control/other/CardRenderer',
     "sap/f/library",
     "sap/ui/integration/library",
     "vistex/control/CustomContent"
@@ -96,21 +96,23 @@ sap.ui.define([
     };
 
     IntegrationCard.prototype.onAfterRendering = function () {
-        $("#" + this.sId).resizable({
-            ghost: true,
-            resize: function (event, ui) {
-                this._userInteracted = false;
-                //console.log('resize1');
-            }.bind(this)
-        }, this)
-            .on("resizestop", function (event, ui) {
-            this._hProps = {
-                originalHeight: ui.originalSize.height,
-                currentHeight: ui.size.height
-            }
-            this._userInteracted = true;
-        }.bind(this));
-
+        if(this.getParent().getMetadata().getName() === "vistex.control.FDashboard"){
+            $("#" + this.sId).resizable({
+                ghost: true,
+                resize: function (event, ui) {
+                    this._userInteracted = false;
+                    //console.log('resize1');
+                }.bind(this)
+            }, this)
+                .on("resizestop", function (event, ui) {
+                    this._hProps = {
+                        originalHeight: ui.originalSize.height,
+                        currentHeight: ui.size.height
+                    }
+                    this._userInteracted = true;
+                }.bind(this));
+        }
+        // IntegrationCard.prototype.onAfterRendering.apply(this, arguments);
     };
 
     IntegrationCard.prototype._applyHeaderManifestSettings = function () {

@@ -3,35 +3,10 @@
         controllerName="vistex.controller.Home.Home"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
-        xmlns:f="sap.f"
-        xmlns:core="sap.ui.core"
-        xmlns:vd="vistex.control"
 >
     <Page id="myPanel" title="VDashboard">
-        <HBox justifyContent="SpaceAround">
+        <headerContent>
             <Button text="To Grid" press="onNavTo"/>
-            <ObjectIdentifier id="item1" title="Card1" text="x:0, y:0" titleActive="true"/>
-            <ObjectIdentifier id="item2" title="Card2" text="x:0, y:0" titleActive="true"/>
-            <ObjectIdentifier id="item3" title="Card3" text="x:0, y:0" titleActive="true"/>
-            <ObjectIdentifier id="item4" title="Card4" text="x:0, y:0" titleActive="true"/>
-        </HBox>
-      <!--  <core:HTML id="htmlGrid"/>-->
-        <!--<vd:VDashboardLayout>
-            <vd:IntegrationCard title="{data>/cards/custom2/title}"
-                                subTitle="{data>/cards/custom2/subTitle}"/>
-        </vd:VDashboardLayout>-->
-      <!--  <vd:VDashboardLayout>
-            <vd:cards>
-                <vd:IntegrationCard title="Hellow Item 1"
-                                    subTitle="ITem 1 subtitle" counter="1">
-                </vd:IntegrationCard>
-                <vd:IntegrationCard title="Hellow Item 1"
-                                    subTitle="ITem 1 subtitle"/>
-                <vd:IntegrationCard title="Hellow Item 1"
-                                    subTitle="ITem 1 subtitle"/>
-                <vd:IntegrationCard title="Hellow Item 1"
-                                    subTitle="ITem 1 subtitle"/>
-            </vd:cards>
-        </vd:VDashboardLayout>-->
+        </headerContent>
     </Page>
 </mvc:View>

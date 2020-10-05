@@ -7,8 +7,9 @@ sap.ui.define([
     "sap/ui/core/dnd/DropPosition",
     "sap/ui/core/dnd/DropLayout",
     "sap/ui/core/ResizeHandler",
-    "sap/ui/thirdparty/jqueryui/jquery-ui-resizable"
-], function (BaseController, Controller, JSONModel, DragInfo, GridDropInfo, DropPosition, DropLayout, ResizeHandler, jqueryuiresizable) {
+    "sap/ui/thirdparty/jqueryui/jquery-ui-resizable",
+    // "sap/ushell/ui/launchpad/GridContainer"
+], function (BaseController, Controller, JSONModel, DragInfo, GridDropInfo, DropPosition, DropLayout, ResizeHandler, jqueryuiresizable, GridContainer) {
     "use strict";
 
     return BaseController.extend("vistex.controller.V", {
@@ -50,7 +51,8 @@ sap.ui.define([
             var oGrid = this.byId("grid1");
             this.getView().setModel(olist, "listCards");
            // this.getView().setModel(oCardManifests, "manifests");
-
+           // var lp = new sap.ushell.ui.launchpad.GridContainer();
+            //this.byId('scrCont').addContent(lp);
             oGrid.addDragDropConfig(new DragInfo({
                 sourceAggregation: "items"
             }));
