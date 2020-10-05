@@ -8,6 +8,13 @@
         xmlns:vd="vistex.control"
 >
     <Page id="myPanel" title="VDashboard">
+        <HBox justifyContent="SpaceAround">
+            <Button text="To Grid" press="onNavTo"/>
+            <ObjectIdentifier id="item1" title="Card1" text="x:0, y:0" titleActive="true"/>
+            <ObjectIdentifier id="item2" title="Card2" text="x:0, y:0" titleActive="true"/>
+            <ObjectIdentifier id="item3" title="Card3" text="x:0, y:0" titleActive="true"/>
+            <ObjectIdentifier id="item4" title="Card4" text="x:0, y:0" titleActive="true"/>
+        </HBox>
       <!--  <core:HTML id="htmlGrid"/>-->
         <!--<vd:VDashboardLayout>
             <vd:IntegrationCard title="{data>/cards/custom2/title}"

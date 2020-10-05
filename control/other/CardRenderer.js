@@ -47,6 +47,8 @@ sap.ui.define([
         oRm.write("<div");
         oRm.writeElementData(oCard);
         oRm.addClass("sapFCard");
+        // oRm.addClass("sapOvpCardResize");
+        oRm.addClass("ui-widget-content");
         if (!oCard.getCardContent()) {
             oRm.addClass("sapFCardNoContent");
         }
@@ -54,13 +56,10 @@ sap.ui.define([
             oRm.addClass("sapFCardBottomHeader");
         }
         oRm.writeClasses();
-
         oRm.addStyle("width", oCard.getWidth());
-
         if (sHeight && sHeight !== 'auto') {
             oRm.addStyle("height", sHeight);
         }
-
         //Accessibility state
         oRm.writeAccessibilityState(oCard, {
             role: "region",
@@ -68,22 +67,17 @@ sap.ui.define([
         });
         oRm.writeStyles();
         oRm.write(">");
-
         //header at the top
         if (oHeader && oCard.getCardHeaderPosition() === "Top") {
             oRm.renderControl(oHeader);
         }
-
         //content
         CardRenderer.renderContentSection(oRm, oCard);
-
         //header at the bottom
         if (bCardHeaderBottom) {
             oRm.renderControl(oHeader);
         }
-
         oRm.renderControl(oCard._ariaText);
-
         //end
         oRm.write("</div>");
        /* if (eleFound === -1) {

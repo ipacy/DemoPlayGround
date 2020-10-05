@@ -87,6 +87,23 @@
       "css": [
         {
           "uri": "style/style.css"
+        },
+        {
+          "uri": "style/grid-stackextra.css"
+        },
+        {
+          "uri": "node_modules/gridstack/dist/gridstack.min.css"
+        },
+        {
+          "uri": "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        }
+      ],
+      "js": [
+        {
+          "uri": "node_modules/gridstack/dist/gridstack.all.js"
+        },
+        {
+          "uri": "node_modules/lodash/lodash.min.js"
         }
       ]
     },
@@ -108,6 +125,13 @@
           "target": [
             "home"
           ]
+        },
+        {
+          "pattern": "grid",
+          "name": "grid",
+          "target": [
+            "grid"
+          ]
         }
       ],
       "targets": {
@@ -115,6 +139,16 @@
           "viewName": "Home",
           "viewPath": "vistex.view.Home",
           "viewId": "View",
+          "viewType": "XML",
+          "transition": "show",
+          "controlId": "sampleApps",
+          "controlAggregation": "pages",
+          "title": ""
+        },
+        "grid": {
+          "viewName": "V",
+          "viewPath": "vistex.view",
+          "viewId": "View2",
           "viewType": "XML",
           "transition": "show",
           "controlId": "sampleApps",

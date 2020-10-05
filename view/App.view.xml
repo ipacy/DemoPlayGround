@@ -9,10 +9,10 @@
         busy="{globalModel>/appBusy}"
         busyIndicatorDelay="0"
         class="sapUiSizeCompact">
-    <App id="sampleApps" backgroundColor="#bbd0e6">
+    <App id="sampleApps">
 
     </App>
-    <!--<tnt:ToolPage>
+    <!--<tnt:ToolPage>  backgroundColor="#bbd0e6"
         <tnt:mainContents>
             <l:ResponsiveSplitter defaultPane="default">
                 <l:PaneContainer>
