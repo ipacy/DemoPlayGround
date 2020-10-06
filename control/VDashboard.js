@@ -96,7 +96,7 @@ sap.ui.define([
             }
             this.setProperty('currentColumn', cl, false);
             let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${screenSize[name].ranges} |||| Column : ${name}`;
-            sap.ui.getCore().byId('__component0---View--myPanel').setTitle(message)
+          //  sap.ui.getCore().byId('__component0---View--myPanel').setTitle(message)
             grid.compact();
         },
 

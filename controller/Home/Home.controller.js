@@ -5,21 +5,19 @@ sap.ui.define([
         "sap/ui/model/json/JSONModel",
         "vistex/utils/Formatter",
         "sap/m/MessageToast",
-        "sap/gantt/misc/Utility",
-        'sap/ui/core/mvc/Controller',
         'vistex/control/IntegrationCard',
         'vistex/control/CustomContent',
         'vistex/control/VDashboard',
-        'sap/m/List',
-        'sap/m/StandardListItem',
-        'sap/f/Card',
     ],
-    function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast, Utility
-        , Controller, IntegrationCard, CardRenderer, CustomContent, VDashboard, List, StandardListItem) {
+    function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast, IntegrationCard, CustomContent, VDashboard) {
         "use strict";
         return BaseController.extend("vistex.controller.Home.Home", {
-
             onInit: function () {
+               // sap.ui.getCore().loadLibrary("sap.viz");
+                this.loadDashboardData();
+            },
+
+            loadDashboardData: function () {
                 this.sizes = [
                     {
                         "customData": [
@@ -50,7 +48,7 @@ sap.ui.define([
                             {
                                 Type: "sap.ui.core.CustomData",
                                 key: "height",
-                                value: 3
+                                value: 1
                             },
                             {
                                 Type: "sap.ui.core.CustomData",
@@ -205,6 +203,78 @@ sap.ui.define([
                                 Type: "sap.ui.core.CustomData",
                                 key: "x",
                                 value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 4
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 4
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 4
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 4
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 4
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 4
                             },
                             {
                                 Type: "sap.ui.core.CustomData",
@@ -240,27 +310,27 @@ sap.ui.define([
                 ];
                 let dPage = {
                     "Type": "vistex.control.VDashboard",
-                    'class':'sapUiMediumMarginBeginEnd',
+                    'class': 'sapUiMediumMarginBeginEnd',
                     "cards": [
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "1",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/0/title}",
+                            "subTitle": "{data>/cards/0/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/0/title}",
+                                "subTitle": "{data>/cards/0/subTitle}",
+                                "statusText": "{data>/cards/0/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/0/counter}",
+                            "manifest": "{data>/cards/0/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/0/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -272,51 +342,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "2",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/1/title}",
+                            "subTitle": "{data>/cards/1/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/1/title}",
+                                "subTitle": "{data>/cards/1/subTitle}",
+                                "statusText": "{data>/cards/1/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/1/counter}",
+                            "manifest": "{data>/cards/1/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
-                                    "templateShareable": false,
-                                    "template": {
-                                        "Type": "sap.m.StandardListItem",
-                                        "title": "{data>name}"
-                                    }
-                                }
-                            },
-                            "height": "100%"
-                        },
-                        {
-                            "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
-                            "header": {
-                                "Type": "sap.f.cards.Header",
-                                "press": "consoleLog",
-                                "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
-                            },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
-                            "content": {
-                                "Type": "sap.m.List",
-                                "showSeparators": "Inner",
-                                "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/1/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -328,23 +370,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/2/title}",
+                            "subTitle": "{data>/cards/2/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/2/title}",
+                                "subTitle": "{data>/cards/2/subTitle}",
+                                "statusText": "{data>/cards/2/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/2/counter}",
+                            "manifest": "{data>/cards/2/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/2/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -356,23 +398,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/0/title}",
+                            "subTitle": "{data>/cards/0/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/0/title}",
+                                "subTitle": "{data>/cards/0/subTitle}",
+                                "statusText": "{data>/cards/0/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/0/counter}",
+                            "manifest": "{data>/cards/0/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/0/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -384,23 +426,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/4/title}",
+                            "subTitle": "{data>/cards/4/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/4/title}",
+                                "subTitle": "{data>/cards/4/subTitle}",
+                                "statusText": "{data>/cards/4/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/4/counter}",
+                            "manifest": "{data>/cards/4/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/4/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -412,23 +454,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/5/title}",
+                            "subTitle": "{data>/cards/5/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/5/title}",
+                                "subTitle": "{data>/cards/5/subTitle}",
+                                "statusText": "{data>/cards/5/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/5/counter}",
+                            "manifest": "{data>/cards/5/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/5/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -440,23 +482,23 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "3",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/6/title}",
+                            "subTitle": "{data>/cards/6/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/6/title}",
+                                "subTitle": "{data>/cards/6/subTitle}",
+                                "statusText": "{data>/cards/6/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/6/counter}",
+                            "manifest": "{data>/cards/6/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/6/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
@@ -468,47 +510,76 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
-                            "title": "4",
-                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "title": "{data>/cards/7/title}",
+                            "subTitle": "{data>/cards/7/subTitle}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
                                 "press": "consoleLog",
                                 "class": "vistexOvpCardTitle",
-                                "title": "{data>/cards/custom2/title}",
-                                "subtitle": "{data>/cards/custom2/subTitle}",
-                                "statusText": "{data>/cards/custom2/counter}"
+                                "title": "{data>/cards/7/title}",
+                                "subTitle": "{data>/cards/7/subTitle}",
+                                "statusText": "{data>/cards/7/counter}",
                             },
-                            "counter": "{data>/cards/custom2/counter}",
-                            "manifest": "{data>/cards/custom1/data}",
+                            "counter": "{data>/cards/7/counter}",
+                            "manifest": "{data>/cards/7/modelData}",
                             "content": {
                                 "Type": "sap.m.List",
                                 "showSeparators": "Inner",
                                 "items": {
-                                    "path": "data>/cards/custom1/data",
+                                    "path": "data>/cards/7/modelData",
                                     "templateShareable": false,
                                     "template": {
                                         "Type": "sap.m.StandardListItem",
-                                        "title": "{data>name}"
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
                                     }
                                 }
                             },
-                            "height": "100%"
-                        }
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
+                            "title": "{data>/cards/8/title}",
+                            "subTitle": "{data>/cards/8/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/8/title}",
+                                "subTitle": "{data>/cards/8/subTitle}",
+                                "statusText": "{data>/cards/8/counter}",
+                            },
+                            "counter": "{data>/cards/8/counter}",
+                            "manifest": "{data>/cards/8/modelData}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/8/modelData",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+
                     ]
                 };
 
                 dPage.cards.forEach(function (item, i) {
-                    //item.id = (Math.floor(Math.random() * 10000000000) + 1).toString()+"edr";
+                    item.title = (i + 1).toString();
                     item.customData = this.sizes[i].customData;
                 }.bind(this));
 
                 let displayObj = sap.ui.base.ManagedObject.create(dPage);
                 displayObj.addStyleClass('sapUiMediumMarginBeginEnd');
-                this.getView().byId('myPanel').addContent(displayObj);
+                this.getView().byId('myPanel').setContent(displayObj);
 
                 let cardManifests = new sap.ui.model.json.JSONModel();
                 this.getView().setModel(cardManifests, "data");
-                this.getView().getModel("data").loadData("model/cardManifest.json");
+                this.getView().getModel("data").loadData("model/cardData.json");
             },
 
             onNavTo: function () {

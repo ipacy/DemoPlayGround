@@ -1,0 +1,682 @@
+{
+  "cards": [
+    {
+      "title": "Card 1",
+      "subTitle": "",
+      "counter": "1",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ]
+    },
+    {
+      "title": "Card 2",
+      "subTitle": "",
+      "counter": "2",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 3",
+      "subTitle": "",
+      "counter": "3",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 4",
+      "subTitle": "",
+      "counter": "4",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 5",
+      "subTitle": "",
+      "counter": "5",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 6",
+      "subTitle": "",
+      "counter": "6",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 7",
+      "subTitle": "",
+      "counter": "7",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 8",
+      "subTitle": "",
+      "counter": "8",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    },
+    {
+      "title": "Card 9",
+      "subTitle": "",
+      "counter": "9",
+      "modelData": [
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Teico Inc.",
+          "description": "Sun Valley, Idaho",
+          "info": "2456",
+          "infoState": "Error",
+          "company": "Vistex"
+        },
+        {
+          "name": "Freshhh LTD.",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case2.png",
+          "description": "Dayville, Oregon",
+          "info": "1264",
+          "infoState": "Warning"
+        },
+        {
+          "name": "Lean Pulp",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        },
+        {
+          "name": "Lean Pulp1",
+          "icon": "https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Case3.png",
+          "description": "Raymond, Callifornia",
+          "info": "236",
+          "infoState": "None"
+        }
+      ],
+      "header": {
+        "n": "43.2",
+        "u": "%",
+        "trend": "Down",
+        "valueColor": "Error"
+      }
+    }
+  ]
+}
