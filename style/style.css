@@ -1,5 +1,6 @@
 .grid-stack {
     background: #bbd0e6;
+    margin: 2rem;
 }
 
 .grid-stack>.grid-stack-item>.ui-resizable-se, .grid-stack>.grid-stack-item>.ui-resizable-sw {

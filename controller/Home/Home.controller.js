@@ -103,6 +103,126 @@ sap.ui.define([
                             {
                                 Type: "sap.ui.core.CustomData",
                                 key: "width",
+                                value: 3
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 3
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 3
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 3
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
+                                value: 3
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "x",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "y",
+                                value: 0
+                            }
+                        ],
+                    },
+                    {
+                        "customData": [
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "height",
+                                value: 2
+                            },
+                            {
+                                Type: "sap.ui.core.CustomData",
+                                key: "width",
                                 value: 4
                             },
                             {
@@ -120,6 +240,7 @@ sap.ui.define([
                 ];
                 let dPage = {
                     "Type": "vistex.control.VDashboard",
+                    'class':'sapUiMediumMarginBeginEnd',
                     "cards": [
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -207,6 +328,146 @@ sap.ui.define([
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
+                            "title": "3",
+                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/custom2/title}",
+                                "subtitle": "{data>/cards/custom2/subTitle}",
+                                "statusText": "{data>/cards/custom2/counter}"
+                            },
+                            "counter": "{data>/cards/custom2/counter}",
+                            "manifest": "{data>/cards/custom1/data}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/custom1/data",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
+                            "title": "3",
+                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/custom2/title}",
+                                "subtitle": "{data>/cards/custom2/subTitle}",
+                                "statusText": "{data>/cards/custom2/counter}"
+                            },
+                            "counter": "{data>/cards/custom2/counter}",
+                            "manifest": "{data>/cards/custom1/data}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/custom1/data",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
+                            "title": "3",
+                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/custom2/title}",
+                                "subtitle": "{data>/cards/custom2/subTitle}",
+                                "statusText": "{data>/cards/custom2/counter}"
+                            },
+                            "counter": "{data>/cards/custom2/counter}",
+                            "manifest": "{data>/cards/custom1/data}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/custom1/data",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
+                            "title": "3",
+                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/custom2/title}",
+                                "subtitle": "{data>/cards/custom2/subTitle}",
+                                "statusText": "{data>/cards/custom2/counter}"
+                            },
+                            "counter": "{data>/cards/custom2/counter}",
+                            "manifest": "{data>/cards/custom1/data}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/custom1/data",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
+                            "title": "3",
+                            "subTitle": "{data>/cards/custom2/subTitle}",
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "press": "consoleLog",
+                                "class": "vistexOvpCardTitle",
+                                "title": "{data>/cards/custom2/title}",
+                                "subtitle": "{data>/cards/custom2/subTitle}",
+                                "statusText": "{data>/cards/custom2/counter}"
+                            },
+                            "counter": "{data>/cards/custom2/counter}",
+                            "manifest": "{data>/cards/custom1/data}",
+                            "content": {
+                                "Type": "sap.m.List",
+                                "showSeparators": "Inner",
+                                "items": {
+                                    "path": "data>/cards/custom1/data",
+                                    "templateShareable": false,
+                                    "template": {
+                                        "Type": "sap.m.StandardListItem",
+                                        "title": "{data>name}",
+                                        "icon": "sap-icon://group"
+                                    }
+                                }
+                            },
+                        },
+                        {
+                            "Type": "vistex.control.IntegrationCard",
                             "title": "4",
                             "subTitle": "{data>/cards/custom2/subTitle}",
                             "header": {
@@ -237,10 +498,12 @@ sap.ui.define([
                 };
 
                 dPage.cards.forEach(function (item, i) {
+                    //item.id = (Math.floor(Math.random() * 10000000000) + 1).toString()+"edr";
                     item.customData = this.sizes[i].customData;
                 }.bind(this));
 
                 let displayObj = sap.ui.base.ManagedObject.create(dPage);
+                displayObj.addStyleClass('sapUiMediumMarginBeginEnd');
                 this.getView().byId('myPanel').addContent(displayObj);
 
                 let cardManifests = new sap.ui.model.json.JSONModel();
