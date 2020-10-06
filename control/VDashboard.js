@@ -103,7 +103,8 @@ sap.ui.define([
             this.setProperty('currentColumn', cl, false);
             this._applyStateConfig(cl);
             let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${screenSize[name].ranges} |||| Column : ${name}`;
-            //  sap.ui.getCore().byId('__component0---View--myPanel').setTitle(message)
+            //  sap.ui.getCore().byId('__component0---View--myTitle').setTitle(message)
+            sap.ui.getCore().byId('__component0---View--myTitle').setText(message)
             grid.compact();
         },
 
@@ -133,17 +134,37 @@ sap.ui.define([
                 var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                     oCard = sap.ui.getCore().byId(sId),
                     node = this.grid.engine.nodes[i],
-                    object = {
+                    oData = {
                         height: node.height,
                         width: node.width,
                         x: node.x,
                         y: node.y
                     },
-                    oCustomControl = new sap.ui.core.CustomData({
-                        key: this.getCurrentColumn().toString(),
-                        value: object
+                    currentColumn = this.getCurrentColumn().toString(),
+                    currentConfig = oCard.data().config,
+                    filteredItems = currentConfig.filter((item) => {
+                        return Object.keys(item)[0] === currentColumn;
+                    }, this);
+
+                let newObject = {};
+                newObject[currentColumn] = oData
+
+                if (!!filteredItems && filteredItems.length > 0) {
+                    filteredItems[0] = newObject
+                    let oCustomControl = new sap.ui.core.CustomData({
+                        key: 'config',
+                        value: currentConfig
                     });
-                oCard.addCustomData(oCustomControl);
+                    oCard.addCustomData(oCustomControl);
+                } else {
+                    let newArray = [...oCard.data('config')];
+                    newArray.push(newObject);
+                    let oCustomControl = new sap.ui.core.CustomData({
+                        key: 'config',
+                        value: newArray
+                    });
+                    oCard.addCustomData(oCustomControl);
+                }
             });
         },
 
@@ -203,8 +224,10 @@ sap.ui.define([
             oRm.write(">");
             var oCards = oControl.getCards();
             oCards.forEach(function (card) {
-                var width = !!card.data('width') ? card.data('width') : 2;
-                var height = !!card.data('height') ? card.data('height') : 2;
+                /*  var width = !!card.data('width') ? card.data('width') : 2;
+                  var height = !!card.data('height') ? card.data('height') : 2; */
+                var width = !!card.getCardWidth() ? card.getCardWidth() : 2;
+                var height = !!card.getCardHeight() ? card.getCardHeight() : 2;
                 /*  var x = !!card.data('x') ? card.data('x') : 0;
                   var y = !!card.data('y') ? card.data('y') : 0;
                     data-gs-x="${x}"
