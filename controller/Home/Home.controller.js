@@ -309,6 +309,7 @@ sap.ui.define([
                     }
                 ];
                 let dPage = {
+                    "id": "myovp",
                     "Type": "vistex.control.VDashboard",
                     'class': 'sapUiMediumMarginBeginEnd',
                     "cards": [
@@ -339,6 +340,14 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData1": "{data>/cards/0/customData}",
+                            "customData":[
+                                {
+                                    "Type": "sap.ui.core.CustomData",
+                                    "key": "config",
+                                    "value": "{data>/cards/0/customData}"
+                                }
+                            ]
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -367,6 +376,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/1/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -395,6 +405,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/2/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -423,6 +434,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/3/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -451,6 +463,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/4/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -479,6 +492,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/5/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -507,6 +521,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/6/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -535,6 +550,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/7/customData}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -563,6 +579,7 @@ sap.ui.define([
                                     }
                                 }
                             },
+                            "customData": "{data>/cards/8/customData}"
                         },
 
                     ]
@@ -584,6 +601,12 @@ sap.ui.define([
 
             onNavTo: function () {
                 this.getRouter().navTo('grid');
+            },
+
+            onSaveGridConfig: function () {
+                var ovp = sap.ui.getCore().byId('myovp');
+                ovp._saveGridConfig();
             }
+
         })
     });

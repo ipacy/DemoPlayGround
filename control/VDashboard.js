@@ -64,10 +64,9 @@ sap.ui.define([
             }
         },
 
-        resizeGrid: function (grid) {
+        _getName: function () {
             let width = document.body.clientWidth,
-                screenSize = this.getScreenSize(),
-                cl = 0, name = "";
+                name = "";
             switch (true) {
                 case (width < 656):
                     name = 'c1';
@@ -87,17 +86,65 @@ sap.ui.define([
                 case (width > 2000):
                     name = 'c6';
                     break;
-
             }
+            return name;
+        },
+
+        resizeGrid: function (grid) {
+            let width = document.body.clientWidth,
+                screenSize = this.getScreenSize(),
+                cl = 0, name = "";
+            name = this._getName();
 
             cl = screenSize[name].columns;
             if (!!cl) {
                 grid.column(cl);
             }
             this.setProperty('currentColumn', cl, false);
+            this._applyStateConfig(cl);
             let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${screenSize[name].ranges} |||| Column : ${name}`;
-          //  sap.ui.getCore().byId('__component0---View--myPanel').setTitle(message)
+            //  sap.ui.getCore().byId('__component0---View--myPanel').setTitle(message)
             grid.compact();
+        },
+
+        _applyStateConfig: function (cl) {
+
+            var data = this.getCards()[0].data(cl.toString());
+            if (data) {
+                let nodes = this.grid.engine.nodes;
+                nodes.forEach((item, i) => {
+                    var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
+                        oCard = sap.ui.getCore().byId(sId);
+                    var oData = {};
+                    var aData = oCard.getCustomData();
+                    aData.forEach((obj) => {
+                        if (obj.getKey() === cl.toString()) {
+                            oData = obj.getValue();
+                        }
+                    });
+                    this.grid.update(nodes[i].el, oData.x, oData.y, oData.width, oData.height);
+                });
+            }
+        },
+
+        _saveGridConfig: function () {
+            let nodes = this.grid.engine.nodes;
+            nodes.forEach((item, i) => {
+                var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
+                    oCard = sap.ui.getCore().byId(sId),
+                    node = this.grid.engine.nodes[i],
+                    object = {
+                        height: node.height,
+                        width: node.width,
+                        x: node.x,
+                        y: node.y
+                    },
+                    oCustomControl = new sap.ui.core.CustomData({
+                        key: this.getCurrentColumn().toString(),
+                        value: object
+                    });
+                oCard.addCustomData(oCustomControl);
+            });
         },
 
         loadManualData: function (data) {

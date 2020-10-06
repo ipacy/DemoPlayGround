@@ -68,6 +68,16 @@
           "info": "236",
           "infoState": "None"
         }
+      ],
+      "customData": [
+        {
+          "6": {
+            "height": 2,
+            "width": 1,
+            "x": 6,
+            "y": 0
+          }
+        }
       ]
     },
     {
@@ -144,7 +154,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 3",
@@ -220,7 +231,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 4",
@@ -296,7 +308,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 5",
@@ -372,7 +385,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 6",
@@ -448,7 +462,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 7",
@@ -524,7 +539,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 8",
@@ -600,7 +616,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     },
     {
       "title": "Card 9",
@@ -676,7 +693,8 @@
         "u": "%",
         "trend": "Down",
         "valueColor": "Error"
-      }
+      },
+      "customData": []
     }
   ]
 }
