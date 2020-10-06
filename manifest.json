@@ -104,9 +104,6 @@
       "js": [
         {
           "uri": "node_modules/gridstack/dist/gridstack.all.js"
-        },
-        {
-          "uri": "node_modules/lodash/lodash.min.js"
         }
       ]
     },
