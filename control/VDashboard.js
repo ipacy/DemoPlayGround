@@ -125,8 +125,7 @@ sap.ui.define([
         },
 
         generateSavedData: function () {
-            var serializedData = this.grid.save();
-            return serializedData;
+            return this.grid.save();
         },
 
         commitGrid: function () {
