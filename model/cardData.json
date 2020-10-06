@@ -4,6 +4,8 @@
       "title": "Card 1",
       "subTitle": "",
       "counter": "1",
+      "cardWidth": 1,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -83,6 +85,8 @@
     {
       "title": "Card 2",
       "subTitle": "",
+      "cardWidth": 1,
+      "cardHeight": 2,
       "counter": "2",
       "modelData": [
         {
@@ -161,6 +165,8 @@
       "title": "Card 3",
       "subTitle": "",
       "counter": "3",
+      "cardWidth": 3,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -238,6 +244,8 @@
       "title": "Card 4",
       "subTitle": "",
       "counter": "4",
+      "cardWidth": 3,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -315,6 +323,8 @@
       "title": "Card 5",
       "subTitle": "",
       "counter": "5",
+      "cardWidth": 3,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -392,6 +402,8 @@
       "title": "Card 6",
       "subTitle": "",
       "counter": "6",
+      "cardWidth": 3,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -469,6 +481,8 @@
       "title": "Card 7",
       "subTitle": "",
       "counter": "7",
+      "cardWidth": 4,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -546,6 +560,8 @@
       "title": "Card 8",
       "subTitle": "",
       "counter": "8",
+      "cardWidth": 4,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -623,6 +639,8 @@
       "title": "Card 9",
       "subTitle": "",
       "counter": "9",
+      "cardWidth": 4,
+      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",

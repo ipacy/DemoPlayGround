@@ -3,13 +3,18 @@
         controllerName="vistex.controller.Home.Home"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:f="sap.f"
+        xmlns:core="sap.ui.core"
         xmlns="sap.m"
         height="100%">
     <f:DynamicPage id="myPanel">
         <f:header>
             <f:DynamicPageHeader>
                 <f:content>
-                    <Button text="Save Grid Config" press="onSaveGridConfig"/>
+                    <Toolbar>
+                        <Title id="myTitle" text="VDashboard" title="Resizable"/>
+                        <ToolbarSpacer/>
+                        <Button text="Save Grid Config" press="onSaveGridConfig"/>
+                    </Toolbar>
                 </f:content>
             </f:DynamicPageHeader>
         </f:header>

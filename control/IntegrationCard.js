@@ -79,6 +79,10 @@ sap.ui.define([
                 analyticalHeaderKPIDeviationNumber: {"type": "string", group: "Appearance"},
 
                 analyticalHeaderKPIDeviationUnit: {"type": "string", group: "Appearance"},
+
+                cardHeight:  {"type": "int", group: "Appearance"},
+
+                cardWidth:  {"type": "int", group: "Appearance"},
             },
             defaultAggregation: "content",
             aggregations: {
