@@ -83,6 +83,8 @@ sap.ui.define([
                 cardHeight:  {"type": "int", group: "Appearance"},
 
                 cardWidth:  {"type": "int", group: "Appearance"},
+
+                cardConfiguration: {"type": "object"},
             },
             defaultAggregation: "content",
             aggregations: {

@@ -13,301 +13,11 @@ sap.ui.define([
         "use strict";
         return BaseController.extend("vistex.controller.Home.Home", {
             onInit: function () {
-               // sap.ui.getCore().loadLibrary("sap.viz");
+                // sap.ui.getCore().loadLibrary("sap.viz");
                 this.loadDashboardData();
             },
 
             loadDashboardData: function () {
-                this.sizes = [
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 1
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 6
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 1
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 0
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 3
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    },
-                    {
-                        "customData": [
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "height",
-                                value: 2
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "width",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "x",
-                                value: 4
-                            },
-                            {
-                                Type: "sap.ui.core.CustomData",
-                                key: "y",
-                                value: 0
-                            }
-                        ],
-                    }
-                ];
                 let dPage = {
                     "id": "myovp",
                     "Type": "vistex.control.VDashboard",
@@ -334,13 +44,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData":[
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/0/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/0/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -363,13 +67,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData":[
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/1/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/1/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -392,13 +90,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/2/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/2/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -421,20 +113,14 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/3/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/3/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
                             "title": "{data>/cards/4/title}",
                             "subTitle": "{data>/cards/4/subTitle}",
                             "cardHeight": "{data>/cards/4/cardHeight}",
-                            "cardWidth": "{data>/cards/4/cardWidth}",
+                            "cardWidth": "{data>/cards/5/cardWidth}",
                             "counter": "{data>/cards/4/counter}",
                             "manifest": "{data>/cards/4/modelData}",
                             "content": {
@@ -450,13 +136,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/4/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/4/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -479,13 +159,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/5/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/5/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -508,13 +182,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/6/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/6/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -537,13 +205,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/7/customData}"
-                                }
-                            ]
+                            "cardConfiguration": "{data>/cards/7/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -566,24 +228,12 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": [
-                                {
-                                    "Type": "sap.ui.core.CustomData",
-                                    "key": "config",
-                                    "value": "{data>/cards/8/customData}"
-                                }
-                            ]
-                        }
+                            "cardConfiguration": "{data>/cards/8/cardConfiguration}"
+                        },
                     ]
                 };
 
-              /*  dPage.cards.forEach(function (item, i) {
-                    item.title = (i + 1).toString();
-                    item.customData = this.sizes[i].customData;
-                }.bind(this));*/
-
                 let displayObj = sap.ui.base.ManagedObject.create(dPage);
-                displayObj.addStyleClass('sapUiMediumMarginBeginEnd');
                 this.getView().byId('myPanel').setContent(displayObj);
 
                 let cardManifests = new sap.ui.model.json.JSONModel();

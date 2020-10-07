@@ -103,26 +103,19 @@ sap.ui.define([
             this.setProperty('currentColumn', cl, false);
             this._applyStateConfig(cl);
             let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${screenSize[name].ranges} |||| Column : ${name}`;
-            //  sap.ui.getCore().byId('__component0---View--myTitle').setTitle(message)
             sap.ui.getCore().byId('__component0---View--myTitle').setText(message)
             grid.compact();
         },
 
         _applyStateConfig: function (cl) {
 
-            var data = this.getCards()[0].data(cl.toString());
-            if (data) {
+            var data = this.getCards()[0].getProperty("cardConfiguration");
+            if (data && data[cl]) {
                 let nodes = this.grid.engine.nodes;
                 nodes.forEach((item, i) => {
                     var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                         oCard = sap.ui.getCore().byId(sId);
-                    var oData = {};
-                    var aData = oCard.getCustomData();
-                    aData.forEach((obj) => {
-                        if (obj.getKey() === cl.toString()) {
-                            oData = obj.getValue();
-                        }
-                    });
+                    var oData = oCard.getProperty("cardConfiguration")[cl];
                     this.grid.update(nodes[i].el, oData.x, oData.y, oData.width, oData.height);
                 });
             }
@@ -134,37 +127,16 @@ sap.ui.define([
                 var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                     oCard = sap.ui.getCore().byId(sId),
                     node = this.grid.engine.nodes[i],
-                    oData = {
+                    value = {
                         height: node.height,
                         width: node.width,
                         x: node.x,
                         y: node.y
                     },
-                    currentColumn = this.getCurrentColumn().toString(),
-                    currentConfig = oCard.data().config,
-                    filteredItems = currentConfig.filter((item) => {
-                        return Object.keys(item)[0] === currentColumn;
-                    }, this);
-
-                let newObject = {};
-                newObject[currentColumn] = oData
-
-                if (!!filteredItems && filteredItems.length > 0) {
-                    filteredItems[0] = newObject
-                    let oCustomControl = new sap.ui.core.CustomData({
-                        key: 'config',
-                        value: currentConfig
-                    });
-                    oCard.addCustomData(oCustomControl);
-                } else {
-                    let newArray = [...oCard.data('config')];
-                    newArray.push(newObject);
-                    let oCustomControl = new sap.ui.core.CustomData({
-                        key: 'config',
-                        value: newArray
-                    });
-                    oCard.addCustomData(oCustomControl);
-                }
+                    cl = this.getCurrentColumn(),
+                    oConfig = oCard.getProperty("cardConfiguration");
+                oConfig[cl] = value;
+                oCard.setProperty("cardConfiguration", oConfig);
             });
         },
 
@@ -201,6 +173,7 @@ sap.ui.define([
                 alwaysShowResizeHandle: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                     navigator.userAgent
                 ),
+                resizable:{ handles: 'e, se, s, sw, w', autoHide:true},
                 disableOneColumnMode: true, // will manually do 1 column
                 float: false,
                 cellHeight: 200,
@@ -224,17 +197,12 @@ sap.ui.define([
             oRm.write(">");
             var oCards = oControl.getCards();
             oCards.forEach(function (card) {
-                /*  var width = !!card.data('width') ? card.data('width') : 2;
-                  var height = !!card.data('height') ? card.data('height') : 2; */
                 var width = !!card.getCardWidth() ? card.getCardWidth() : 2;
                 var height = !!card.getCardHeight() ? card.getCardHeight() : 2;
-                /*  var x = !!card.data('x') ? card.data('x') : 0;
-                  var y = !!card.data('y') ? card.data('y') : 0;
-                    data-gs-x="${x}"
-                  data-gs-y="${y}"*/
                 card.setHeight('100%');
                 oRm.write(`<div class="grid-stack-item"
                 data-gs-min-width="2"
+                data-gs-min-height="2"
                 data-gs-no-move="no"
                 data-gs-width="${width}"
                 data-gs-height="${height}">`);

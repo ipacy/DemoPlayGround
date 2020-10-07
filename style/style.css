@@ -4,13 +4,23 @@
     margin: 2rem;
 }
 
-.grid-stack>.grid-stack-item>.ui-resizable-se, .grid-stack>.grid-stack-item>.ui-resizable-sw {
+.grid-stack>.grid-stack-item>.ui-resizable-se {
     background-size: contain !important;
     background-image: url("resize4.png") !important;
     transform: rotate(0deg) !important;
     width: 11px !important;
     height: 13px !important;
     bottom: 10px !important;
+}
+
+.grid-stack>.grid-stack-item>.ui-resizable-sw {
+/*    background-size: contain !important;
+    background-image: url("resize4.png") !important;
+    transform: rotate(90deg) !important;
+    width: 11px !important;
+    height: 12px !important;
+    bottom: 10px !important;*/
+    display: none !important;
 }
 
 .grid-stack-item-content {

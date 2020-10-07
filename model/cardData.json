@@ -3,9 +3,9 @@
     {
       "title": "Card 1",
       "subTitle": "",
-      "counter": "1",
-      "cardWidth": 1,
       "cardHeight": 2,
+      "cardWidth": 1,
+      "counter": "1",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -71,22 +71,13 @@
           "infoState": "None"
         }
       ],
-      "customData": [
-        {
-          "6": {
-            "height": 2,
-            "width": 1,
-            "x": 6,
-            "y": 0
-          }
-        }
-      ]
+      "cardConfiguration": []
     },
     {
       "title": "Card 2",
       "subTitle": "",
-      "cardWidth": 1,
-      "cardHeight": 2,
+      "cardHeight": 1,
+      "cardWidth": 2,
       "counter": "2",
       "modelData": [
         {
@@ -159,14 +150,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 3",
       "subTitle": "",
-      "counter": "3",
-      "cardWidth": 3,
       "cardHeight": 2,
+      "cardWidth": 3,
+      "counter": "3",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -238,14 +229,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 4",
       "subTitle": "",
-      "counter": "4",
-      "cardWidth": 3,
       "cardHeight": 2,
+      "cardWidth": 3,
+      "counter": "4",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -317,14 +308,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 5",
       "subTitle": "",
-      "counter": "5",
-      "cardWidth": 3,
       "cardHeight": 2,
+      "cardWidth": 3,
+      "counter": "5",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -396,14 +387,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 6",
       "subTitle": "",
-      "counter": "6",
-      "cardWidth": 3,
       "cardHeight": 2,
+      "cardWidth": 3,
+      "counter": "6",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -475,14 +466,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 7",
       "subTitle": "",
+      "cardHeight": 3,
+      "cardWidth": 2,
       "counter": "7",
-      "cardWidth": 4,
-      "cardHeight": 2,
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -554,14 +545,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 8",
       "subTitle": "",
-      "counter": "8",
-      "cardWidth": 4,
       "cardHeight": 2,
+      "cardWidth": 4,
+      "counter": "8",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -633,14 +624,14 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     },
     {
       "title": "Card 9",
       "subTitle": "",
-      "counter": "9",
-      "cardWidth": 4,
       "cardHeight": 2,
+      "cardWidth": 4,
+      "counter": "9",
       "modelData": [
         {
           "name": "Teico Inc.",
@@ -712,7 +703,7 @@
         "trend": "Down",
         "valueColor": "Error"
       },
-      "customData": []
+      "cardConfiguration": []
     }
   ]
 }
