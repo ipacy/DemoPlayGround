@@ -109,19 +109,13 @@ sap.ui.define([
 
         _applyStateConfig: function (cl) {
 
-            var data = this.getCards()[0].data(cl.toString());
-            if (data) {
+            var data = this.getCards()[0].getProperty("cardConfiguration");
+            if (data && data[cl]) {
                 let nodes = this.grid.engine.nodes;
                 nodes.forEach((item, i) => {
                     var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                         oCard = sap.ui.getCore().byId(sId);
-                    var oData = {};
-                    var aData = oCard.getCustomData();
-                    aData.forEach((obj) => {
-                        if (obj.getKey() === cl.toString()) {
-                            oData = obj.getValue();
-                        }
-                    });
+                    var oData = oCard.getProperty("cardConfiguration")[cl];
                     this.grid.update(nodes[i].el, oData.x, oData.y, oData.width, oData.height);
                 });
             }
@@ -133,17 +127,16 @@ sap.ui.define([
                 var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                     oCard = sap.ui.getCore().byId(sId),
                     node = this.grid.engine.nodes[i],
-                    object = {
+                    value = {
                         height: node.height,
                         width: node.width,
                         x: node.x,
                         y: node.y
                     },
-                    oCustomControl = new sap.ui.core.CustomData({
-                        key: this.getCurrentColumn().toString(),
-                        value: object
-                    });
-                oCard.addCustomData(oCustomControl);
+                    cl = this.getCurrentColumn(),
+                    oConfig = oCard.getProperty("cardConfiguration");
+                oConfig[cl] = value;
+                oCard.setProperty("cardConfiguration", oConfig);
             });
         },
 

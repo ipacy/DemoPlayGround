@@ -340,7 +340,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData1": "{data>/cards/0/customData}",
+                            "cardConfiguration": "{data>/cards/0/cardConfiguration}",
                             "customData":[
                                 {
                                     "Type": "sap.ui.core.CustomData",
@@ -376,7 +376,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/1/customData}"
+                            "cardConfiguration": "{data>/cards/1/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -405,7 +405,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/2/customData}"
+                            "cardConfiguration": "{data>/cards/2/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -434,7 +434,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/3/customData}"
+                            "cardConfiguration": "{data>/cards/3/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -463,7 +463,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/4/customData}"
+                            "cardConfiguration": "{data>/cards/4/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -492,7 +492,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/5/customData}"
+                            "cardConfiguration": "{data>/cards/5/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -521,7 +521,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/6/customData}"
+                            "cardConfiguration": "{data>/cards/6/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -550,7 +550,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/7/customData}"
+                            "cardConfiguration": "{data>/cards/7/cardConfiguration}"
                         },
                         {
                             "Type": "vistex.control.IntegrationCard",
@@ -579,7 +579,7 @@ sap.ui.define([
                                     }
                                 }
                             },
-                            "customData": "{data>/cards/8/customData}"
+                            "cardConfiguration": "{data>/cards/8/cardConfiguration}"
                         },
 
                     ]
