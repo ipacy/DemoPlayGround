@@ -101,7 +101,7 @@ sap.ui.define([
         this.setManifest({});
     };
 
-    IntegrationCard.prototype.onAfterRendering = function () {
+   /* IntegrationCard.prototype.onAfterRendering = function () {
         if(this.getParent().getMetadata().getName() === "vistex.control.FDashboard"){
             $("#" + this.sId).resizable({
                 ghost: true,
@@ -119,7 +119,7 @@ sap.ui.define([
                 }.bind(this));
         }
         // IntegrationCard.prototype.onAfterRendering.apply(this, arguments);
-    };
+    };*/
 
     IntegrationCard.prototype._applyHeaderManifestSettings = function () {
         var oManifestHeader = {

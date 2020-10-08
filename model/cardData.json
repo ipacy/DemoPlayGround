@@ -2,7 +2,7 @@
   "cards": [
     {
       "title": "Card 1",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 1,
       "counter": "1",
@@ -75,7 +75,7 @@
     },
     {
       "title": "Card 2",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 1,
       "cardWidth": 2,
       "counter": "2",
@@ -154,7 +154,7 @@
     },
     {
       "title": "Card 3",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 3,
       "counter": "3",
@@ -233,7 +233,7 @@
     },
     {
       "title": "Card 4",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 3,
       "counter": "4",
@@ -312,7 +312,7 @@
     },
     {
       "title": "Card 5",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 3,
       "counter": "5",
@@ -391,7 +391,7 @@
     },
     {
       "title": "Card 6",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 3,
       "counter": "6",
@@ -470,7 +470,7 @@
     },
     {
       "title": "Card 7",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 3,
       "cardWidth": 2,
       "counter": "7",
@@ -549,7 +549,7 @@
     },
     {
       "title": "Card 8",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 4,
       "counter": "8",
@@ -628,7 +628,7 @@
     },
     {
       "title": "Card 9",
-      "subTitle": "",
+      "subTitle": "Subtitle of the card",
       "cardHeight": 2,
       "cardWidth": 4,
       "counter": "9",
