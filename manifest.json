@@ -45,9 +45,6 @@
     "dependencies": {
       "minUI5Version": "1.64.0",
       "libs": {
-        "sap.gantt": {
-          "minVersion": "1.64.0"
-        },
         "sap.ui.core": {
           "minVersion": "1.64.0"
         },
@@ -92,10 +89,10 @@
           "uri": "style/gtms.css"
         },
         {
-          "uri": "node_modules/gridstack/dist/gridstack.min.css"
+          "uri": "style/gridstack-extra.css"
         },
         {
-          "uri": "https://cdn.jsdelivr.net/npm/gridstack@2.0.0/dist/gridstack-extra.css"
+          "uri": "node_modules/gridstack/dist/gridstack.min.css"
         },
         {
           "uri": "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
