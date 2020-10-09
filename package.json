@@ -1,12 +1,21 @@
 {
-  "name": "tpm_demo",
+  "name": "vdashboard",
   "version": "1.0.0",
   "description": "",
-  "author": "PAC",
-  "license": "ISC",
+  "author": "Vistex",
   "dependencies": {
     "gridstack": "^2.0.0",
-    "sass": "^1.26.11",
-    "scss": "^0.2.4"
+    "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-pretty-data": "^0.1.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-ui5-preload": "^1.3.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-ui5": "0.0.4",
+    "eslint": "^5.16.0"
+  },
+  "scripts": {
+    "quality:eslint": "node node_modules/eslint/bin/eslint.js ./**/*.js -c eslint.eslintrc"
   }
 }

@@ -51,6 +51,9 @@
         "sap.m": {
           "minVersion": "1.64.0"
         },
+        "sap.viz": {
+          "minVersion": "1.64.0"
+        },
         "sap.uxap": {
           "minVersion": "1.64.0"
         },

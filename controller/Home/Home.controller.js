@@ -8,14 +8,14 @@ sap.ui.define([
         'vistex/control/IntegrationCard',
         'vistex/control/ovp/IntegrationCard',
         'vistex/control/CustomContent',
-        'vistex/control/VDashboard'
+        'vistex/control/VDashboard',
     ],
     function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast, OIntegrationCard, CustomContent, VDashboard) {
         "use strict";
         return BaseController.extend("vistex.controller.Home.Home", {
             onInit: function () {
-                // sap.ui.getCore().loadLibrary("sap.viz");
                 this.loadDashboardData();
+                sap.ui.getCore().loadLibrary("sap.viz");
             },
 
             loadDashboardData: function () {
@@ -23,6 +23,63 @@ sap.ui.define([
                     "id": "myovp",
                     "Type": "vistex.control.VDashboard",
                     "cards": [
+                        {
+                            "Type": "vistex.control.ovp.IntegrationCard",
+                            "cardHeight": 2,
+                            "cardWidth": 3,
+                            "header": {
+                                "Type": "sap.f.cards.Header",
+                                "title": "Card 0",
+                                "subtitle": "Viz Chart",
+                                "statusText": "0"
+                            },
+                            "content": {
+                                "Type": "sap.viz.ui5.controls.VizFrame",
+                                "uiConfig": {
+                                    "applicationSet": "fiori"
+                                },
+                                "height": "100%",
+                                "width": "100%",
+                                "vizType": "donut",
+                                "dataset": {
+                                    "Type": "sap.viz.ui5.data.FlattenedDataset",
+                                    "data": "{data>/DonutChart/data}",
+                                    "dimensions": [
+                                        {
+                                            "Type": "sap.viz.ui5.data.DimensionDefinition",
+                                            "name": "Store Name",
+                                            "value": "{data>Store Name}"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "Type": "sap.viz.ui5.data.MeasuresDefinition",
+                                            "name": "Revenue",
+                                            "value": "{data>Revenue}"
+                                        }
+                                    ]
+                                },
+                                "feeds": [
+                                    {
+                                        "Type": "sap.viz.ui5.controls.common.feeds.FeedItem",
+                                        "uid": "color",
+                                        "type": "Dimension",
+                                        "values": [
+                                            "Store Name"
+                                        ]
+                                    },
+                                    {
+                                        "Type": "sap.viz.ui5.controls.common.feeds.FeedItem",
+                                        "uid": "size",
+                                        "type": "Measure",
+                                        "values": [
+                                            "Revenue"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "cardConfiguration": "{data>/cards/0/cardConfiguration}"
+                        },
                         {
                             "Type": "vistex.control.ovp.IntegrationCard",
                             "cardHeight": "{data>/cards/0/cardHeight}",
@@ -304,6 +361,10 @@ sap.ui.define([
                 this.getView().byId('myPanel').setContent(displayObj);
                 let cardManifests = new sap.ui.model.json.JSONModel("model/cardData.json");
                 this.getView().setModel(cardManifests, "data");
+            },
+
+            onAfterRendering: function(){
+                // sap.ui.getCore().loadLibrary("sap.viz");
             },
 
             onNavTo: function () {

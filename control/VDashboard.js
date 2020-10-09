@@ -6,7 +6,6 @@ sap.ui.define([
     return Control.extend("vistex.control.VDashboard", {
         metadata: {
             properties: {
-                value: {type: "float", defaultValue: 0},
                 currentColumn: {type: "string", defaultValue: ''},
                 screenSize: {
                     type: "object", defaultValue: {

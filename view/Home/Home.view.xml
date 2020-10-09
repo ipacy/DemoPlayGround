@@ -6,7 +6,7 @@
         xmlns:core="sap.ui.core"
         xmlns="sap.m"
         height="100%">
-    <f:DynamicPage id="myPanel">
+    <f:DynamicPage id="myPanel" backgroundDesign="Solid">
         <f:header>
             <f:DynamicPageHeader>
                 <f:content>
