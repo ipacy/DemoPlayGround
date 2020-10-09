@@ -21,9 +21,11 @@ sap.ui.define([
             properties: {
                 colSpan: {type: "int"},
 
-                cardHeight: {"type": "int"},
+                height: {type: "sap.ui.core.CSSSize", group: "Appearance", defaultValue: "100%"},
 
-                cardWidth: {"type": "int"},
+                cardHeight: {"type": "int", defaultValue: 2},
+
+                cardWidth: {"type": "int", defaultValue: 2},
 
                 cardConfiguration: {"type": "object"},
             }

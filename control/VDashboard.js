@@ -61,6 +61,13 @@ sap.ui.define([
                     multiple: true,
                     singularName: "card"
                 }
+            },
+            events: {
+                onResize: {
+                    parameters: {
+                        value: {type: "object"}
+                    }
+                }
             }
         },
 
@@ -93,10 +100,11 @@ sap.ui.define([
         resizeGrid: function (grid) {
             let width = document.body.clientWidth,
                 screenSize = this.getScreenSize(),
-                cl = 0, name = "";
+                name = "";
             name = this._getName();
 
-            cl = screenSize[name].columns;
+            let cl = screenSize[name].columns;
+
             if (!!cl) {
                 grid.column(cl);
             }
@@ -105,17 +113,27 @@ sap.ui.define([
             let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${screenSize[name].ranges} |||| Column : ${name}`;
             sap.ui.getCore().byId('__component0---View--myTitle').setText(message)
             grid.compact();
+            //this.fireOnResize({/* no parameters */ });
+
+            this.fireEvent("onResize", {
+                value: {
+                    "columnName": name,
+                    "width": width,
+                    "column": cl,
+                    "range": `${screenSize[name].ranges}`,
+                    "message": message
+                }
+            });
         },
 
         _applyStateConfig: function (cl) {
-
-            var data = this.getCards()[0].getProperty("cardConfiguration");
+            let data = this.getCards()[0].getProperty("cardConfiguration");
             if (data && data[cl]) {
                 let nodes = this.grid.engine.nodes;
                 nodes.forEach((item, i) => {
-                    var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
+                    let sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                         oCard = sap.ui.getCore().byId(sId);
-                    var oData = oCard.getProperty("cardConfiguration")[cl];
+                    let oData = oCard.getProperty("cardConfiguration")[cl];
                     this.grid.update(nodes[i].el, oData.x, oData.y, oData.width, oData.height);
                 });
             }
@@ -124,18 +142,17 @@ sap.ui.define([
         _saveGridConfig: function () {
             let nodes = this.grid.engine.nodes;
             nodes.forEach((item, i) => {
-                var sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
+                let sId = $(this.grid.engine.nodes[i].el).children().children().attr('id'),
                     oCard = sap.ui.getCore().byId(sId),
                     node = this.grid.engine.nodes[i],
-                    value = {
-                        height: node.height,
-                        width: node.width,
-                        x: node.x,
-                        y: node.y
-                    },
-                    cl = this.getCurrentColumn(),
+                    cl = this.getProperty('currentColumn'),
                     oConfig = oCard.getProperty("cardConfiguration");
-                oConfig[cl] = value;
+                oConfig[cl] = {
+                    height: node.height,
+                    width: node.width,
+                    x: node.x,
+                    y: node.y
+                };
                 oCard.setProperty("cardConfiguration", oConfig);
             });
         },
@@ -173,7 +190,7 @@ sap.ui.define([
                 alwaysShowResizeHandle: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                     navigator.userAgent
                 ),
-                resizable:{ handles: 'e, se, s, sw, w', autoHide:true},
+                resizable: {handles: 'e, se, s, sw, w', autoHide: true},
                 disableOneColumnMode: true, // will manually do 1 column
                 float: false,
                 cellHeight: 200,
@@ -192,25 +209,33 @@ sap.ui.define([
         },
 
         renderer: function (oRm, oControl) {
-            oRm.write("<div class='grid-stack grid-stack-N'");
+            oRm.write("<div");
             oRm.writeControlData(oControl);
+            oRm.addClass("grid-stack grid-stack-N");
+            oRm.writeClasses();
             oRm.write(">");
-            var oCards = oControl.getCards();
-            oCards.forEach(function (card) {
-                var width = !!card.getCardWidth() ? card.getCardWidth() : 2;
-                var height = !!card.getCardHeight() ? card.getCardHeight() : 2;
-                card.setHeight('100%');
-                oRm.write(`<div class="grid-stack-item"
+            let oCards = oControl.getCards();
+            if (!!oCards) {
+                oCards.forEach(function (card) {
+
+                    let firstChild = card.getContent();
+                    if (Array.isArray(firstChild) && firstChild[0] || firstChild instanceof sap.m.ScrollContainer) {
+                        firstChild.addStyleClass('ovpScroll');
+                    }
+
+                    let divRef = `<div class="grid-stack-item"
                 data-gs-min-width="2"
-                data-gs-min-height="2"
+                data-gs-min-height="1"
                 data-gs-no-move="no"
-                data-gs-width="${width}"
-                data-gs-height="${height}">`);
-                oRm.write('<div class="grid-stack-item-content">');
-                oRm.renderControl(card);
-                oRm.write("</div>");
-                oRm.write("</div>");
-            }.bind(this));
+                data-gs-width="${card.getProperty('cardWidth')}"
+                data-gs-height="${card.getProperty('cardHeight')}">`;
+                    oRm.write(divRef);
+                    oRm.write('<div class="grid-stack-item-content">');
+                    oRm.renderControl(card);
+                    oRm.close("div");
+                    oRm.close("div");
+                }.bind(this));
+            }
             oRm.write("</div>");
         }
     });

@@ -18,7 +18,7 @@ sap.ui.define([
         init: function () {
             this.setModel(models.createDeviceModel(), "device");
 
-            JSONView.prototype.onControllerConnected = function (oController) {
+         /*   JSONView.prototype.onControllerConnected = function (oController) {
                 var that = this;
 
                 //use preprocessors to fix IDs, associations and event handler references
@@ -80,7 +80,7 @@ sap.ui.define([
                             delete oSettings.class;
                         }
                     });
-            };
+            };*/
 
             UIComponent.prototype.init.apply(this, arguments);
             this.getRouter().initialize();
