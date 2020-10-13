@@ -4,16 +4,16 @@
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:f="sap.f"
         xmlns="sap.m"
+        xmlns:core="sap.ui.core"
         height="100%">
     <Page floatingFooter="true" enableScrolling="false">
         <customHeader>
             <Toolbar design="Info" style="Clear">
-                <ToolbarSpacer width="2rem"/>
-                <f:Avatar backgroundColor="Transparent" displaySize="XS" displayShape="Square" imageFitType="Contain"
-                          src="sap-icon://bbyd-dashboard"/>
-                <Title text="Vistex Dashboard" title="Resizable"/>
                 <ToolbarSpacer/>
-                <f:Avatar backgroundColor="Transparent" displaySize="XS" initials="UI"
+                <core:Icon color="#0854a0" size="1.5rem" src="sap-icon://bbyd-dashboard"/>
+                <Title level="H1" text="VISTEX DASHBOARD" title="Resizable"/>
+                <ToolbarSpacer/>
+                <f:Avatar showBorder="true" backgroundColor="Transparent" displaySize="XS" initials="UI"
                           src="sap-icon://person-placeholder"/>
                 <ToolbarSpacer width="2rem"/>
             </Toolbar>

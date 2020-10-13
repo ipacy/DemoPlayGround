@@ -7,8 +7,6 @@
         busy="{globalModel>/appBusy}"
         busyIndicatorDelay="0"
         class="sapUiSizeCompact" height="100%">
-    <App id="sampleApps" backgroundColor="#dcdde2">
-
-    </App>
+    <App id="sampleApps"/>
 
 </mvc:View>
