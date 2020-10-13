@@ -5,17 +5,16 @@
         xmlns:f="sap.f"
         xmlns="sap.m"
         height="100%">
-    <Page floatingFooter="true">
+    <Page floatingFooter="true" enableScrolling="false">
         <customHeader>
             <Toolbar design="Info" style="Clear">
                 <ToolbarSpacer width="2rem"/>
                 <f:Avatar backgroundColor="Transparent" displaySize="XS" displayShape="Square" imageFitType="Contain"
                           src="sap-icon://bbyd-dashboard"/>
                 <Title text="Vistex Dashboard" title="Resizable"/>
-<!--                <ToolbarSpacer/>-->
-
                 <ToolbarSpacer/>
-                <f:Avatar backgroundColor="Transparent" displaySize="XS" initials="UI" src="sap-icon://person-placeholder"/>
+                <f:Avatar backgroundColor="Transparent" displaySize="XS" initials="UI"
+                          src="sap-icon://person-placeholder"/>
                 <ToolbarSpacer width="2rem"/>
             </Toolbar>
         </customHeader>
