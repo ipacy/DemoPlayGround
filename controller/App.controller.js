@@ -1,8 +1,7 @@
 sap.ui.define([
     "vistex/controller/BaseController",
-    "sap/m/MessageBox",
-    'vistex/utils/Formatter'
-], function (BaseController, MessageBox, Formatter) {
+    "sap/m/MessageBox"
+], function (BaseController, MessageBox) {
     "use strict";
 
     return BaseController.extend("vistex.controller.App", {

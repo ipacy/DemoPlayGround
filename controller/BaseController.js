@@ -1,10 +1,9 @@
 sap.ui.define([
         "sap/ui/core/mvc/Controller",
         "sap/ui/core/routing/History",
-        "sap/ui/model/json/JSONModel",
-        'vistex/utils/Constants'
+        "sap/ui/model/json/JSONModel"
     ],
-    function (Controller, History, JSONModel, Constants) {
+    function (Controller, History, JSONModel) {
         "use strict";
 
         return Controller.extend("vistex.controller.BaseController", {
@@ -12,28 +11,6 @@ sap.ui.define([
                 this.setModel(new JSONModel({
                     busy: false
                 }), "viewModel");
-            },
-
-            isAdmin: function (oUserInfo) {
-                if (!oUserInfo) {
-                    oUserInfo = this.getModel("globalModel").getProperty("/userInfo/User");
-                }
-                return oUserInfo && oUserInfo.Role === Constants.userRoles.admin;
-            },
-
-            isDeveloper: function (oUserInfo) {
-                if (!oUserInfo) {
-                    oUserInfo = this.getModel("globalModel").getProperty("/userInfo/User");
-                }
-                return oUserInfo && oUserInfo.Role === Constants.userRoles.developer;
-            },
-
-            isAdminOrDeveloper: function (oUserInfo) {
-                if (!oUserInfo) {
-                    oUserInfo = this.getModel("globalModel").getProperty("/userInfo/User");
-                }
-                return oUserInfo && oUserInfo.Role === Constants.userRoles.developer ||
-                    oUserInfo && oUserInfo.Role === Constants.userRoles.admin;
             },
 
             setViewBusy: function (bValue) {
@@ -97,58 +74,9 @@ sap.ui.define([
                 }
             },
 
-            processBackendMessages: function (oData) {
-                if (oData && oData.Message && oData.Message.Code === 0) {
-                    alert(oData.Message.Text);
-                }
-            },
-
-            setHeaderTitle: function (oTitle) {
-                //this.getModel("globalModel").setProperty("/headerTitle", oTitle);
-            },
-
             openUrl: function (oUrl) {
                 if (oUrl)
                     window.open(oUrl);
-            },
-
-            triggerMail: function (oName) {
-                sap.m.URLHelper.triggerEmail(oName, "");
-            },
-            getCurrentGroup: function (gId) {
-                var oGroups = this.getModel("globalModel").getProperty("/groups");
-                var oGroupDetails;
-
-                for (var i = 0; i < oGroups.length; i++)
-                    if (oGroups[i].Id == gId)
-                        oGroupDetails = oGroups[i];
-
-                if (oGroupDetails)
-                    return oGroupDetails;
-            },
-            getGroups: function () {
-                var oGroups = this.getModel("globalModel").getProperty("/groups");
-                return (oGroups && oGroups.length > 0) ? oGroups : [];
-            },
-            jsonModelFilter: function (iaFields, ioControl, lsAggregationName, And, isSearchText) {
-                var loBinding = ioControl.getBinding(lsAggregationName);
-                var laFilters = [];
-                if (isSearchText) {
-                    isSearchText = isSearchText.trim();
-                    if (isSearchText) {
-                        isSearchText = isSearchText.trim();
-                        for (var i = 0; i < iaFields.length; i++) {
-                            laFilters.push(new sap.ui.model.Filter(iaFields[i].FieldName, iaFields[i].FilterOperator, isSearchText));
-                        }
-                        loBinding.filter(new sap.ui.model.Filter(laFilters, And));
-                    } else {
-                        laFilters = [];
-                        loBinding.filter(laFilters);
-                    }
-                } else {
-                    laFilters = [];
-                    loBinding.filter(laFilters);
-                }
             }
 
         });

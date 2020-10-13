@@ -1,14 +1,12 @@
 sap.ui.define([
         "vistex/controller/BaseController",
         "sap/m/MessageBox",
-        "vistex/utils/Constants",
         "sap/ui/model/json/JSONModel",
-        "vistex/utils/Formatter",
         "sap/m/MessageToast",
         'vistex/control/ovp/IntegrationCard',
         'vistex/control/VDashboard',
     ],
-    function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast , IntegrationCard, VDashboard) {
+    function (BaseController, MessageBox, JSONModel, MessageToast , IntegrationCard, VDashboard) {
         "use strict";
         return BaseController.extend("vistex.controller.Home.Home", {
             onInit: function () {

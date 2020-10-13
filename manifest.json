@@ -5,7 +5,7 @@
     "id": "vistex",
     "type": "application",
     "i18n": "i18n/i18n.properties",
-    "title": "PAC Bot",
+    "title": "Vistex Dashboard",
     "description": "{{appDescription}}",
     "applicationVersion": {
       "version": "1.0.0"
