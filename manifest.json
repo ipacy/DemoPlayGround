@@ -102,9 +102,7 @@
         }
       ],
       "js": [
-        {
-          "uri": "node_modules/gridstack/dist/gridstack.all.js"
-        }
+
       ]
     },
     "routing": {

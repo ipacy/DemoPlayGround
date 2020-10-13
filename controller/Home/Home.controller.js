@@ -5,12 +5,10 @@ sap.ui.define([
         "sap/ui/model/json/JSONModel",
         "vistex/utils/Formatter",
         "sap/m/MessageToast",
-        'vistex/control/IntegrationCard',
         'vistex/control/ovp/IntegrationCard',
-        'vistex/control/CustomContent',
         'vistex/control/VDashboard',
     ],
-    function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast, OIntegrationCard, CustomContent, VDashboard) {
+    function (BaseController, MessageBox, Constants, JSONModel, Formatter, MessageToast , IntegrationCard, VDashboard) {
         "use strict";
         return BaseController.extend("vistex.controller.Home.Home", {
             onInit: function () {
@@ -25,13 +23,13 @@ sap.ui.define([
                     "cards": [
                         {
                             "Type": "vistex.control.ovp.IntegrationCard",
-                            "cardHeight": 2,
-                            "cardWidth": 3,
+                            "cardHeight": "{data>/cards/0/cardHeight}",
+                            "cardWidth": "{data>/cards/0/cardWidth}",
                             "header": {
                                 "Type": "sap.f.cards.Header",
-                                "title": "Card 0",
-                                "subtitle": "Viz Chart",
-                                "statusText": "0"
+                                "title": "{data>/cards/0/title}",
+                                "subtitle": "{data>/cards/0/subTitle}",
+                                "statusText": "{data>/cards/0/info}"
                             },
                             "content": {
                                 "Type": "sap.viz.ui5.controls.VizFrame",
@@ -77,37 +75,6 @@ sap.ui.define([
                                         ]
                                     }
                                 ]
-                            },
-                            "cardConfiguration": "{data>/cards/0/cardConfiguration}"
-                        },
-                        {
-                            "Type": "vistex.control.ovp.IntegrationCard",
-                            "cardHeight": "{data>/cards/0/cardHeight}",
-                            "cardWidth": "{data>/cards/0/cardWidth}",
-                            "header": {
-                                "Type": "sap.f.cards.Header",
-                                "title": "{data>/cards/0/title}",
-                                "subtitle": "{data>/cards/0/subTitle}",
-                                "statusText": "{data>/cards/0/info}"
-                            },
-                            "content": {
-                                "Type": "sap.m.ScrollContainer",
-                                "width": "100%",
-                                "height": "100%",
-                                "vertical": true,
-                                "content": {
-                                    "Type": "sap.m.List",
-                                    "showSeparators": "Inner",
-                                    "items": {
-                                        "path": "data>/cards/0/modelData",
-                                        "templateShareable": false,
-                                        "template": {
-                                            "Type": "sap.m.StandardListItem",
-                                            "title": "{data>name}",
-                                            "icon": "sap-icon://group"
-                                        }
-                                    }
-                                }
                             },
                             "cardConfiguration": "{data>/cards/0/cardConfiguration}"
                         },
@@ -179,17 +146,67 @@ sap.ui.define([
                                 "statusText": "{data>/cards/3/info}",
                             },
                             "content": {
-                                "Type": "sap.m.List",
-                                "showSeparators": "Inner",
-                                "items": {
-                                    "path": "data>/cards/3/modelData",
-                                    "templateShareable": false,
-                                    "template": {
-                                        "Type": "sap.m.StandardListItem",
-                                        "title": "{data>name}",
-                                        "description": "{data>description}"
+                                "Type": "sap.viz.ui5.controls.VizFrame",
+                                "uiConfig": {
+                                    "applicationSet": "fiori"
+                                },
+                                "height": "100%",
+                                "width": "100%",
+                                "vizType": "bubble",
+                                "dataset": {
+                                    "Type": "sap.viz.ui5.data.FlattenedDataset",
+                                    "data": "{data>/BubbleChart/data}",
+                                    "dimensions": [
+                                        {
+                                            "Type": "sap.viz.ui5.data.DimensionDefinition",
+                                            "name": "Store Name",
+                                            "value": "{data>Store Name}"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "Type": "sap.viz.ui5.data.MeasuresDefinition",
+                                            "name": "Revenue",
+                                            "value": "{data>Revenue}"
+                                        },
+                                        {
+                                            "Type": "sap.viz.ui5.data.MeasuresDefinition",
+                                            "name": "Cost",
+                                            "value": "{data>Cost}"
+                                        },
+                                        {
+                                            "Type": "sap.viz.ui5.data.MeasuresDefinition",
+                                            "name": "Consumption",
+                                            "value": "{data>Consumption}"
+                                        }
+                                    ]
+                                },
+                                "feeds": [
+                                    {
+                                        "Type": "sap.viz.ui5.controls.common.feeds.FeedItem",
+                                        "uid": "valueAxis",
+                                        "type": "Measure",
+                                        "values": [
+                                            "Revenue"
+                                        ]
+                                    },
+                                    {
+                                        "Type": "sap.viz.ui5.controls.common.feeds.FeedItem",
+                                        "uid": "valueAxis2",
+                                        "type": "Measure",
+                                        "values": [
+                                            "Cost"
+                                        ]
+                                    },
+                                    {
+                                        "Type": "sap.viz.ui5.controls.common.feeds.FeedItem",
+                                        "uid": "bubbleWidth",
+                                        "type": "Measure",
+                                        "values": [
+                                            "Consumption"
+                                        ]
                                     }
-                                }
+                                ]
                             },
                             "cardConfiguration": "{data>/cards/3/cardConfiguration}"
                         },
@@ -216,7 +233,7 @@ sap.ui.define([
                                         "priority": "None",
                                         "datetime": "1 hour",
                                         "authorName": "{data>info}",
-                                        "authorPicture":"sap-icon://group"
+                                        "authorPicture": "sap-icon://group"
                                     }
                                 }
                             },
@@ -233,8 +250,18 @@ sap.ui.define([
                                 "statusText": "{data>/cards/5/info}",
                             },
                             "content": {
-                                "Type": "sap.m.PDFViewer",
-                                "source": "assets/sample.pdf"
+                                "Type": "sap.m.Carousel",
+                                "loop": true,
+                                "pages": [
+                                    {
+                                        "Type": "sap.m.PDFViewer",
+                                        "source": "assets/sample.pdf"
+                                    },
+                                    {
+                                        "Type": "sap.m.Image",
+                                        "src": "assets/home.jpg"
+                                    }
+                                ]
                             },
                             "cardConfiguration": "{data>/cards/5/cardConfiguration}"
                         },
@@ -363,8 +390,20 @@ sap.ui.define([
                 this.getView().setModel(cardManifests, "data");
             },
 
-            onAfterRendering: function(){
-                // sap.ui.getCore().loadLibrary("sap.viz");
+            onAfterRendering: function () {
+                var ovp = sap.ui.getCore().byId('myovp');
+                ovp.attachOnResize(this.onHandleResize.bind(this));
+            },
+
+            onHandleResize: function (values) {
+                let width = values.getParameter('value').width,
+                    name = values.getParameter('value').columnName,
+                    range = values.getParameter('value').range,
+                    cl = values.getParameter('value').column;
+                let message = `Screen size: ${width} |||| Columns : ${cl} |||| Info : ${range}`; //|||| Column : ${name}
+                this.byId('myTitle').setText(message);
+               /* this.byId('myTitle1').setText(`Columns : ${cl}`);
+                this.byId('myTitle2').setText(`Size Range : ${range}`);*/
             },
 
             onNavTo: function () {
@@ -373,7 +412,7 @@ sap.ui.define([
 
             onSaveGridConfig: function () {
                 var ovp = sap.ui.getCore().byId('myovp');
-                ovp._saveGridConfig();
+                ovp.updateGridConfig();
             }
 
         })

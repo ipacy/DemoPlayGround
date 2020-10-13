@@ -4,8 +4,8 @@
     margin: 2rem;
 }
 
-.grid-stack>.grid-stack-item>.ui-resizable-se {
-/*    background-size: contain !important;*/
+.grid-stack > .grid-stack-item > .ui-resizable-se {
+    /*    background-size: contain !important;*/
     background-image: url("resize4.png") !important;
     transform: rotate(0deg) !important;
     width: 11px !important;
@@ -13,7 +13,7 @@
     bottom: 10px !important;
 }
 
-.grid-stack>.grid-stack-item>.ui-resizable-sw {
+.grid-stack > .grid-stack-item > .ui-resizable-sw {
     display: none !important;
 }
 
@@ -24,6 +24,7 @@
     box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
     horiz-align: right;
 }
+
 /*.grid-stack>.grid-stack-item>.grid-stack-item-content{
     overflow-y: hidden !important;
 }*/
@@ -31,11 +32,17 @@ body {
     margin: 0;
     padding: 0;
 }
-.grid-stack>.grid-stack-item>.grid-stack-item-content::-webkit-scrollbar {
+
+.grid-stack > .grid-stack-item > .grid-stack-item-content::-webkit-scrollbar {
     display: none;
 }
+
 html.sap-desktop .sapMScrollContVH.ovpScroll::-webkit-scrollbar {
     /*display: none;*/
     width: 0.75rem !important;
     height: 0.75rem;
+}
+
+.grid-stack .grid-stack-placeholder > .placeholder-content {
+    border: 2px dashed #a4a0a0 !important;
 }
