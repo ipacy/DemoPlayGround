@@ -2,32 +2,13 @@
         xmlns:core="sap.ui.core"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
-        xmlns:tnt="sap.tnt"
-        xmlns:l="sap.ui.layout"
         controllerName="vistex.controller.App"
         displayBlock="true"
         busy="{globalModel>/appBusy}"
         busyIndicatorDelay="0"
-        class="sapUiSizeCompact">
+        class="sapUiSizeCompact" height="100%">
     <App id="sampleApps" backgroundColor="#dcdde2">
 
     </App>
-    <!--<tnt:ToolPage>  backgroundColor="#dcdde2"
-        <tnt:mainContents>
-            <l:ResponsiveSplitter defaultPane="default">
-                <l:PaneContainer>
-                    <l:PaneContainer orientation="Horizontal">
-                        <l:SplitPane  requiredParentWidth="600">
-                            <App id="Vistex-DS1"/>
-                        </l:SplitPane>
-                        <l:SplitPane  requiredParentWidth="800">
-                            <App id="Vistex-DS2"/>
-                        </l:SplitPane>
-                    </l:PaneContainer>
-                </l:PaneContainer>
-            </l:ResponsiveSplitter>
-
-        </tnt:mainContents>
-    </tnt:ToolPage>-->
 
 </mvc:View>

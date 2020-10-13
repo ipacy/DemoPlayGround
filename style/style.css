@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 .grid-stack {
     /*background: #bbd0e6;*/
     /*background: #dcdde2;*/
@@ -25,13 +29,6 @@
     horiz-align: right;
 }
 
-/*.grid-stack>.grid-stack-item>.grid-stack-item-content{
-    overflow-y: hidden !important;
-}*/
-body {
-    margin: 0;
-    padding: 0;
-}
 
 .grid-stack > .grid-stack-item > .grid-stack-item-content::-webkit-scrollbar {
     display: none;
@@ -45,4 +42,8 @@ html.sap-desktop .sapMScrollContVH.ovpScroll::-webkit-scrollbar {
 
 .grid-stack .grid-stack-placeholder > .placeholder-content {
     border: 2px dashed #a4a0a0 !important;
+}
+.sapUiBody .sapFDynamicPageContentFitContainer,
+.sapUiBody .sapFDynamicPageContent {
+    padding: 0;
 }

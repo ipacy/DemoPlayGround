@@ -117,13 +117,6 @@
           "target": [
             "home"
           ]
-        },
-        {
-          "pattern": "grid",
-          "name": "grid",
-          "target": [
-            "grid"
-          ]
         }
       ],
       "targets": {
@@ -131,16 +124,6 @@
           "viewName": "Home",
           "viewPath": "vistex.view.Home",
           "viewId": "View",
-          "viewType": "XML",
-          "transition": "show",
-          "controlId": "sampleApps",
-          "controlAggregation": "pages",
-          "title": ""
-        },
-        "grid": {
-          "viewName": "V",
-          "viewPath": "vistex.view",
-          "viewId": "View2",
           "viewType": "XML",
           "transition": "show",
           "controlId": "sampleApps",
