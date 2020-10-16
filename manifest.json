@@ -86,10 +86,7 @@
     "resources": {
       "css": [
         {
-          "uri": "style/style.css"
-        },
-        {
-          "uri": "style/gridstack-extra.css"
+          "uri": "style/gridstack.css"
         },
         {
           "uri": "style/gridstack.min.css"
